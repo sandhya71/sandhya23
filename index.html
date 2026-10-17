@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandhya Kapse | Data &amp; AI Engineer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230C0F13%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27Arial%27 font-size=%2720%27 font-weight=%27700%27 fill=%27%2300C9B1%27 text-anchor=%27middle%27%3ES%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0C0F13">
+<meta name="description" content="Data &amp; AI Engineer specialising in production-grade pipelines, LLM agents, and Responsible AI on Azure. 50M+ events/day. Former Microsoft. Open to opportunities.">
+<meta property="og:title" content="Sandhya Kapse | Data &amp; AI Engineer">
+<meta property="og:description" content="Production-grade pipelines · LLM agents · 50M+ events/day · Former Microsoft · Open to roles">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://sandhya71.github.io/sandhya23/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap">
+<style>
+/* ── RESET & TOKENS ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #0C0F13;
+  --bg2:     #12161C;
+  --bg3:     #181D25;
+  --line:    #1F2733;
+  --muted:   #3D4A5C;
+  --subtle:  #6B7A90;
+  --body:    #A8B5C8;
+  --fg:      #E2EAF4;
+  --accent:  #00C9B1;
+  --accent2: #0085FF;
+  --warm:    #E8C96A;
+  --font-d:  'Syne', system-ui, sans-serif;
+  --font-m:  'DM Mono', 'Fira Code', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-m);
+  font-size: 13px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── NAV ───────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(12,15,19,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  padding: 0 max(24px, 4vw);
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--font-d);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--fg);
+  letter-spacing: -0.02em;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 11px;
+  color: var(--subtle);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-cta {
+  font-size: 11px;
+  padding: 6px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: background .2s, color .2s;
+}
+.nav-cta:hover { background: var(--accent); color: #000; }
+
+/* ── PAGE ──────────────────────────────────────────────── */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 max(20px, 4vw);
+}
+
+/* ── HERO ──────────────────────────────────────────────── */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 52px;
+  border-bottom: 1px solid var(--line);
+}
+.hero-inner {
+  padding-block: 80px 60px;
+}
+.hero-eyebrow {
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 28px; height: 1px;
+  background: var(--accent);
+  display: block;
+}
+.hero-name {
+  font-family: var(--font-d);
+  font-size: clamp(52px, 9vw, 96px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+.hero-name .teal { color: var(--accent); }
+.hero-role {
+  font-family: var(--font-d);
+  font-size: clamp(15px, 2.2vw, 20px);
+  font-weight: 400;
+  color: var(--subtle);
+  margin-bottom: 32px;
+  letter-spacing: 0.01em;
+}
+.hero-bio {
+  font-size: 14px;
+  color: var(--body);
+  line-height: 1.8;
+  max-width: 620px;
+  margin-bottom: 40px;
+}
+.hero-bio strong { color: var(--fg); font-weight: 500; }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 52px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-family: var(--font-m);
+  font-size: 12px;
+  text-decoration: none;
+  transition: all .2s;
+  letter-spacing: 0.03em;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+  font-weight: 500;
+}
+.btn-primary:hover { background: #00e5ce; }
+.btn-outline {
+  border: 1px solid var(--line);
+  color: var(--body);
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── STATS ─────────────────────────────────────────────── */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.stat-cell {
+  background: var(--bg2);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.stat-n {
+  font-family: var(--font-d);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.stat-l {
+  font-size: 10px;
+  color: var(--subtle);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* ── SECTION BASE ──────────────────────────────────────── */
+section {
+  padding-block: 72px;
+  border-bottom: 1px solid var(--line);
+}
+section:last-of-type { border-bottom: none; }
+
+.sec-head {
+  font-family: var(--font-m);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.sec-head::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.sec-title {
+  font-family: var(--font-d);
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 700;
+  color: var(--fg);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+.sec-sub {
+  font-size: 13.5px;
+  color: var(--body);
+  max-width: 580px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+/* ── STACK ─────────────────────────────────────────────── */
+.stack-groups { display: flex; flex-direction: column; gap: 16px; }
+.stack-row { display: flex; gap: 14px; align-items: flex-start; }
+.sk {
+  font-size: 10px;
+  color: var(--subtle);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-top: 4px;
+  flex-shrink: 0;
+  width: 120px;
+}
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  font-family: var(--font-m);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  color: var(--body);
+  white-space: nowrap;
+}
+.chip.t { border-color: var(--accent); color: var(--accent); background: rgba(0,201,177,.06); }
+.chip.b { border-color: var(--accent2); color: var(--accent2); background: rgba(0,133,255,.06); }
+
+/* ── PROJECTS ──────────────────────────────────────────── */
+.proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 22px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  transition: border-color .2s, background .2s, transform .2s;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity .2s;
+}
+.card:hover { border-color: rgba(0,201,177,.4); background: var(--bg3); transform: translateY(-2px); }
+.card:hover::before { opacity: 1; }
+
+.card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 24px;
+  border-color: rgba(0,201,177,.2);
+}
+.card.featured::before { opacity: 1; }
+
+.card-eyebrow {
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card-eyebrow::before {
+  content: '';
+  width: 16px; height: 1px;
+  background: var(--accent);
+}
+.card-name {
+  font-family: var(--font-d);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 10px;
+  line-height: 1.3;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.card-name .arr { color: var(--muted); font-size: 16px; transition: color .2s; }
+.card:hover .arr { color: var(--accent); }
+.card-desc {
+  font-size: 12px;
+  color: var(--subtle);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.card.featured .card-desc { color: var(--body); font-size: 12.5px; }
+.card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag {
+  font-size: 10.5px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  background: rgba(0,201,177,.07);
+  color: var(--accent);
+  border: 1px solid rgba(0,201,177,.15);
+  font-family: var(--font-m);
+}
+.tag.b { background: rgba(0,133,255,.07); color: var(--accent2); border-color: rgba(0,133,255,.15); }
+.tag.w { background: rgba(232,201,106,.07); color: var(--warm); border-color: rgba(232,201,106,.15); }
+
+.card-meta { text-align: right; }
+.card-badge {
+  display: inline-block;
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background: rgba(0,201,177,.1);
+  color: var(--accent);
+  border: 1px solid rgba(0,201,177,.2);
+  font-family: var(--font-m);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.card-date { font-size: 11px; color: var(--subtle); }
+
+.card.soon {
+  border-style: dashed;
+  cursor: default;
+  grid-column: 1 / -1;
+}
+.card.soon:hover { transform: none; border-color: var(--line); background: var(--bg2); }
+.card.soon::before { display: none; }
+.soon-chip {
+  font-size: 10px; padding: 2px 8px; border-radius: 2px;
+  background: rgba(232,201,106,.08); color: var(--warm);
+  border: 1px solid rgba(232,201,106,.2); font-family: var(--font-m);
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+
+/* ── EXPERIENCE ────────────────────────────────────────── */
+.exp-list { display: flex; flex-direction: column; gap: 0; }
+.exp-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding-block: 28px;
+  border-bottom: 1px solid var(--line);
+}
+.exp-item:last-child { border-bottom: none; }
+.exp-left { padding-top: 2px; }
+.exp-co {
+  font-family: var(--font-d);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 3px;
+}
+.exp-date {
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.exp-role {
+  font-family: var(--font-d);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 4px;
+}
+.exp-org {
+  font-size: 11px;
+  color: var(--subtle);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.exp-bullets { display: flex; flex-direction: column; gap: 6px; }
+.exp-bullet {
+  font-size: 12.5px;
+  color: var(--body);
+  line-height: 1.6;
+  padding-left: 14px;
+  position: relative;
+}
+.exp-bullet::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 11px;
+}
+.exp-bullet strong { color: var(--fg); font-weight: 500; }
+
+/* ── LOG (CURRENTLY) ───────────────────────────────────── */
+.log { display: flex; flex-direction: column; }
+.log-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 20px;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.log-row:last-child { border-bottom: none; }
+.log-k {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.log-v {
+  font-size: 13px;
+  color: var(--body);
+  line-height: 1.55;
+}
+.log-v strong { color: var(--fg); font-weight: 500; }
+.log-v .ac { color: var(--accent); }
+
+/* ── CERTS ─────────────────────────────────────────────── */
+.cert-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.cert-card {
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 20px;
+}
+.cert-status {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  display: inline-block;
+  font-family: var(--font-m);
+}
+.cert-status.pursuing { background: rgba(232,201,106,.1); color: var(--warm); border: 1px solid rgba(232,201,106,.2); }
+.cert-status.targeting { background: rgba(0,133,255,.1); color: var(--accent2); border: 1px solid rgba(0,133,255,.2); }
+.cert-status.exploring { background: rgba(107,122,144,.1); color: var(--subtle); border: 1px solid rgba(107,122,144,.2); }
+.cert-code {
+  font-family: var(--font-d);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 4px;
+}
+.cert-name {
+  font-size: 11.5px;
+  color: var(--body);
+  line-height: 1.5;
+}
+
+/* ── EDUCATION ─────────────────────────────────────────── */
+.edu-box {
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.edu-deg { font-family: var(--font-d); font-size: 15px; font-weight: 600; color: var(--fg); margin-bottom: 4px; }
+.edu-inst { font-size: 12px; color: var(--body); }
+.edu-meta { text-align: right; }
+.edu-cgpa { font-family: var(--font-d); font-size: 22px; font-weight: 700; color: var(--accent); }
+.edu-yr { font-size: 11px; color: var(--subtle); }
+
+/* ── CONTACT / FOOTER ──────────────────────────────────── */
+#contact {
+  padding-block: 80px 60px;
+  border-bottom: none;
+}
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+}
+.contact-tag {
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.contact-heading {
+  font-family: var(--font-d);
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+  color: var(--fg);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.contact-heading span { color: var(--accent); }
+.contact-sub {
+  font-size: 14px;
+  color: var(--body);
+  max-width: 480px;
+  line-height: 1.7;
+}
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 24px max(20px, 4vw);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-l { font-size: 11px; color: var(--muted); }
+.footer-r { font-size: 11px; color: var(--muted); font-style: italic; }
+
+/* ── RESPONSIVE ────────────────────────────────────────── */
+@media (max-width: 680px) {
+  .stats-strip { grid-template-columns: repeat(2,1fr); }
+  .proj-grid { grid-template-columns: 1fr; }
+  .card.featured { grid-template-columns: 1fr; }
+  .card-meta { text-align: left; }
+  .exp-item { grid-template-columns: 1fr; gap: 6px; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .sk { width: 90px; }
+}
+
+/* ── ADDITIONS ─────────────────────────────────────────── */
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:#000;padding:8px 14px;border-radius:4px;z-index:200;text-decoration:none}
+.skip:focus{left:8px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.nav-links a.active{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--fg);width:36px;height:34px;border-radius:4px;font-size:16px;cursor:pointer}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+.stat-l small{display:block;text-transform:none;letter-spacing:0;color:var(--muted);font-size:10px;margin-top:3px}
+.hero-bio{max-width:560px}
+.arch{background:var(--bg2);border:1px solid var(--line);border-radius:7px;padding:22px;margin-bottom:14px}
+.arch svg{width:100%;height:auto;display:block}
+.arch-cap{font-size:11.5px;color:var(--subtle);margin-top:12px;line-height:1.6}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.case{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:18px}
+.case h4{font-family:var(--font-d);font-size:13px;color:var(--accent);margin-bottom:8px;letter-spacing:.02em}
+.case p{font-size:12px;color:var(--body);line-height:1.65}
+.how-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.how{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:20px}
+.how h4{font-family:var(--font-d);font-size:14px;color:var(--fg);margin-bottom:6px}
+.how p{font-size:12px;color:var(--subtle);line-height:1.65}
+.status-chip{font-size:10px;padding:2px 8px;border-radius:2px;background:rgba(0,133,255,.1);color:var(--accent2);border:1px solid rgba(0,133,255,.2);letter-spacing:.06em;text-transform:uppercase}
+@media (max-width:680px){
+  .menu-btn{display:inline-block}
+  .nav-links{display:none;position:absolute;top:52px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px max(24px,4vw) 16px}
+  .nav-links.open{display:flex}
+  .nav-links a{display:block;padding:12px 0;font-size:12px}
+  .case-grid,.how-grid{grid-template-columns:1fr}
+  .nav-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<a class="skip" href="#main">Skip to content</a>
+<nav aria-label="Primary">
+  <div class="nav-logo">Sandhya<span>.</span></div>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#casestudy">Case study</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certs">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="nav-cta" href="Sandhya_Kapse_Resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">☰</button>
+  </div>
+</nav>
+
+<main id="main">
+<div class="page">
+
+<!-- ════════════════ HERO ════════════════ -->
+<section id="hero">
+<div class="hero-inner">
+  <div class="hero-eyebrow">github.com/sandhya71</div>
+  <h1 class="hero-name">Sandhya<br><span class="teal">Kapse.</span></h1>
+  <div class="hero-role">Data &amp; AI Engineer &nbsp;·&nbsp; Bangalore, India</div>
+  <p class="hero-bio">
+    I build <strong>production-grade data pipelines and AI agents</strong> on Azure. Today I'm engineering <strong>AutoFX</strong> at Tredence: Medallion pipelines, RAG agents and explainable ML for a global bank. Before that, I spent 16 months at <strong>Microsoft</strong> diagnosing why enterprise data pipelines fail.
+  </p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="Sandhya_Kapse_Resume.pdf" target="_blank" rel="noopener">↓ Download resume</a>
+    <a class="btn btn-outline" href="mailto:sandhyakapse17@gmail.com">Email</a>
+    <a class="btn btn-outline" href="https://linkedin.com/in/sandhyakapse" target="_blank">LinkedIn</a>
+    <a class="btn btn-outline" href="https://github.com/sandhya71" target="_blank">GitHub</a>
+    <span class="btn btn-outline" style="cursor:default; border-color:rgba(232,201,106,.4); color:var(--warm);">● Open to opportunities</span>
+  </div>
+
+  <div class="stats-strip">
+    <div class="stat-cell">
+      <div class="stat-n" data-count="50" data-suffix="M+">50M+</div>
+      <div class="stat-l">Events per day<small>AutoFX FX payment pipeline</small></div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-n" data-count="86" data-suffix="%">86%</div>
+      <div class="stat-l">Propensity model accuracy<small>AutoFX, FX conversion</small></div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-n" data-count="35" data-suffix="%">35%</div>
+      <div class="stat-l">Query runtime cut<small>Snowflake, 5M+ events/day</small></div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-n">~4 yrs</div>
+      <div class="stat-l">Data &amp; AI engineering<small>Tredence · Microsoft · more</small></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ════════════════ STACK ════════════════ -->
+<section id="stack" class="reveal">
+  <div class="sec-head">Stack</div>
+  <h2 class="sec-title">What I build with</h2>
+  <p class="sec-sub">Full Azure Data &amp; AI stack — from raw ingestion to LLM-powered agents, with DataOps and Responsible AI governance throughout.</p>
+
+  <div class="stack-groups">
+    <div class="stack-row">
+      <div class="sk">Azure / Cloud</div>
+      <div class="chips">
+        <span class="chip t">Azure Fabric</span>
+        <span class="chip t">ADF</span>
+        <span class="chip t">Databricks</span>
+        <span class="chip t">Synapse Analytics</span>
+        <span class="chip t">ADLS Gen2</span>
+        <span class="chip t">AI Foundry</span>
+        <span class="chip t">Azure OpenAI</span>
+        <span class="chip">AI Search</span>
+        <span class="chip">Copilot Studio</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="sk">AI / LLM</div>
+      <div class="chips">
+        <span class="chip b">RAG</span>
+        <span class="chip b">LLM Integration</span>
+        <span class="chip b">LangChain</span>
+        <span class="chip b">LangGraph</span>
+        <span class="chip b">Prompt Engineering</span>
+        <span class="chip b">SHAP Explainability</span>
+        <span class="chip b">Responsible AI</span>
+        <span class="chip">NLP</span>
+        <span class="chip">Doc Intelligence</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="sk">Languages</div>
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">PySpark</span>
+        <span class="chip">SQL</span>
+        <span class="chip">Spark SQL</span>
+        </div>
+    </div>
+    <div class="stack-row">
+      <div class="sk">Orchestration</div>
+      <div class="chips">
+        <span class="chip">Apache Airflow</span>
+        <span class="chip">Databricks Jobs</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">MCP Endpoints</span>
+        <span class="chip">Kafka</span>
+        <span class="chip">SSIS</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="sk">Platforms</div>
+      <div class="chips">
+        <span class="chip">Snowflake</span>
+        <span class="chip">Delta Lake</span>
+        
+        <span class="chip">Medallion Architecture</span>
+        <span class="chip">SCD Type 2</span>
+        <span class="chip">CDC</span>
+        <span class="chip">Dimensional Modelling</span>
+        <span class="chip">Star Schema</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="sk">DataOps</div>
+      <div class="chips">
+        <span class="chip">CI/CD · Azure DevOps</span>
+        <span class="chip">RBAC</span>
+        <span class="chip">Data Lineage</span>
+        <span class="chip">Observability</span>
+        <span class="chip">Audit Telemetry</span>
+        <span class="chip">SoX Compliance</span>
+        <span class="chip">Git</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="sk">AI-Assisted</div>
+      <div class="chips">
+        <span class="chip b">Claude Code</span>
+        <span class="chip b">GitHub Copilot</span>
+        <span class="chip">Agentic Workflows</span>
+        <span class="chip">Runbook Automation</span>
+        <span class="chip">Incident Summarisation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ PROJECTS ════════════════ -->
+<section id="projects" class="reveal">
+  <div class="sec-head">Projects</div>
+  <h2 class="sec-title">Things I've built</h2>
+  <p class="sec-sub">Production systems and AI-powered tools — from petabyte-scale payment pipelines to LLM agents that debug themselves at 3am so you don't have to.</p>
+
+  <div class="proj-grid">
+
+    <!-- AUTOFX FEATURED -->
+    <div class="card featured">
+      <div>
+        <div class="card-eyebrow">Enterprise · Tredence</div>
+        <div class="card-name">AutoFX Intelligent Payment Platform <span class="arr"></span></div>
+        <p class="card-desc">
+          Petabyte-scale Medallion pipeline processing <strong>50M+ daily FX payment events</strong> for a global bank.
+          Six-checkpoint ML propensity model achieving <strong>86% accuracy</strong>, RAG-grounded AI agents
+          via Azure AI Foundry, and SHAP-driven Responsible AI advisor dashboard — all built on
+          Microsoft Fabric OneLake with full DataOps · CI/CD · RBAC governance.
+        </p>
+        <div class="card-tags">
+          <span class="tag">Azure Fabric</span><span class="tag">LLMs</span><span class="tag">RAG</span>
+          <span class="tag">SHAP</span><span class="tag">PySpark</span><span class="tag">Responsible AI</span>
+          <span class="tag">Airflow</span><span class="tag">Medallion</span>
+        </div>
+      </div>
+      <div class="card-meta">
+        <div class="card-badge">Featured</div>
+        <div class="card-date">Jul 2026 – Present</div>
+      </div>
+    </div>
+
+    <!-- PIPELINE GUARDIAN -->
+    <div class="card">
+      <div class="card-eyebrow">AI Agent · <span class="status-chip">In progress</span></div>
+      <div class="card-name">PipelineGuardian</div>
+      <p class="card-desc">
+        Design and prototype of a LangChain agent hooked into Airflow's REST API + Snowflake. On DAG failure:
+        auto-collects error logs, run history, upstream status, row-count deltas —
+        generates a structured RCA to Slack in <strong>&lt;60 seconds</strong> with fix recommendation and confidence score.
+      </p>
+      <div class="card-tags">
+        <span class="tag">LangChain</span><span class="tag">Airflow</span>
+        <span class="tag">Snowflake</span><span class="tag b">GPT-4o</span><span class="tag b">Slack Bot</span>
+      </div>
+    </div>
+
+    <!-- FINSIGHT AI -->
+    <div class="card">
+      <div class="card-eyebrow">LangGraph · NL2SQL · <span class="status-chip">Designed</span></div>
+      <div class="card-name">FinSight AI</div>
+      <p class="card-desc">
+        Architecture for a conversational financial analyst: natural language → validated Snowflake SQL →
+        SHAP-grounded insight card. LangGraph multi-agent system with hallucination detection,
+        PII guardrails, and full query audit logging.
+      </p>
+      <div class="card-tags">
+        <span class="tag">LangGraph</span><span class="tag">Snowflake</span>
+        <span class="tag b">NL2SQL</span><span class="tag">SHAP</span><span class="tag">Responsible AI</span>
+      </div>
+    </div>
+
+    <!-- TWITTER -->
+    <a class="card" href="https://github.com/sandhya71/Twitter_Data_Pipeline" target="_blank">
+      <div class="card-eyebrow">Cross-Cloud · Streaming</div>
+      <div class="card-name">Cross-Cloud Streaming Pipeline <span class="arr">↗</span></div>
+      <p class="card-desc">
+        Twitter Streaming API → AWS Lambda → S3 → Elasticsearch.
+        Real-time, cross-cloud, event-driven architecture with automated failure recovery and dead-letter queuing.
+      </p>
+      <div class="card-tags">
+        <span class="tag">Python</span><span class="tag w">AWS Lambda</span>
+        <span class="tag w">S3</span><span class="tag">Elasticsearch</span>
+      </div>
+    </a>
+
+    <!-- OLYMPIC -->
+    <a class="card" href="https://github.com/sandhya71/Olympic_Transformation" target="_blank">
+      <div class="card-eyebrow">Azure · Medallion</div>
+      <div class="card-name">Olympic Data Transformation <span class="arr">↗</span></div>
+      <p class="card-desc">
+        Raw Olympic CSVs → Azure Data Factory ingestion → ADLS Gen2 →
+        Databricks PySpark Medallion transforms → curated gold analytics layer with dimensional model.
+      </p>
+      <div class="card-tags">
+        <span class="tag">ADF</span><span class="tag">Databricks</span>
+        <span class="tag">PySpark</span><span class="tag">Delta Lake</span>
+      </div>
+    </a>
+
+    <!-- DATAPULSE SOON -->
+    <div class="card soon">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+        <div class="card-eyebrow" style="margin-bottom:0; color:var(--subtle);">Kafka · RAG · Retail</div>
+        <span class="soon-chip">Coming Soon</span>
+      </div>
+      <div class="card-name" style="color:var(--subtle);">DataPulse — Retail Intelligence Agent <span class="arr" style="color:var(--muted);"></span></div>
+      <p class="card-desc">
+        Streaming retail pipeline (Kafka → Azure Fabric) + Airflow anomaly detection +
+        RAG alert agent that surfaces stock-out predictions with root cause and reorder action
+        in <strong>15 minutes</strong> — not 24hrs.
+      </p>
+      <div class="card-tags">
+        <span class="tag" style="opacity:.45;">Kafka</span>
+        <span class="tag" style="opacity:.45;">Azure Fabric</span>
+        <span class="tag" style="opacity:.45;">RAG</span>
+        <span class="tag w" style="opacity:.45;">Airflow</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════ CASE STUDY ════════════════ -->
+<section id="casestudy" class="reveal">
+  <div class="sec-head">Case study</div>
+  <h2 class="sec-title">AutoFX: from raw payments to explainable decisions</h2>
+  <p class="sec-sub">Client details are confidential, so this shows the architecture and my contribution without names or data.</p>
+
+  <div class="arch">
+    <svg viewBox="0 0 860 150" role="img" aria-label="AutoFX architecture: sources to staging, canonical, curated, ML pipeline and RAG agent">
+      <defs><marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#3D4A5C"/></marker></defs>
+      <g font-family="DM Mono, monospace" font-size="11" text-anchor="middle">
+        <rect x="6" y="40" width="110" height="64" rx="6" fill="#181D25" stroke="#1F2733"/><text x="61" y="68" fill="#E2EAF4">FX payment</text><text x="61" y="84" fill="#6B7A90">sources · 50M+/day</text>
+        <rect x="156" y="40" width="110" height="64" rx="6" fill="#181D25" stroke="#1F2733"/><text x="211" y="68" fill="#00C9B1">Staging</text><text x="211" y="84" fill="#6B7A90">Bronze · raw</text>
+        <rect x="306" y="40" width="110" height="64" rx="6" fill="#181D25" stroke="#1F2733"/><text x="361" y="68" fill="#00C9B1">Canonical</text><text x="361" y="84" fill="#6B7A90">Silver · validated</text>
+        <rect x="456" y="40" width="110" height="64" rx="6" fill="#181D25" stroke="#1F2733"/><text x="511" y="68" fill="#00C9B1">Curated</text><text x="511" y="84" fill="#6B7A90">Gold · features</text>
+        <rect x="606" y="40" width="110" height="64" rx="6" fill="#181D25" stroke="#0085FF"/><text x="661" y="68" fill="#0085FF">ML pipeline</text><text x="661" y="84" fill="#6B7A90">6 checkpoints</text>
+        <rect x="746" y="40" width="108" height="64" rx="6" fill="#181D25" stroke="#0085FF"/><text x="800" y="68" fill="#0085FF">RAG agent</text><text x="800" y="84" fill="#6B7A90">SHAP · advisor</text>
+        <g stroke="#3D4A5C" stroke-width="1.5" marker-end="url(#ah)"><line x1="118" y1="72" x2="152" y2="72"/><line x1="268" y1="72" x2="302" y2="72"/><line x1="418" y1="72" x2="452" y2="72"/><line x1="568" y1="72" x2="602" y2="72"/><line x1="718" y1="72" x2="742" y2="72"/></g>
+        <text x="430" y="132" fill="#3D4A5C" font-size="10">Governance across all layers: CI/CD · RBAC · lineage · audit telemetry · schema validation</text>
+      </g>
+    </svg>
+    <div class="arch-cap">Microsoft Fabric OneLake and ADLS Gen2 hold the Medallion layers. Azure AI Foundry LLMs and a feature store feed the propensity model, and RAG agents expose results through FastAPI and MCP endpoints.</div>
+  </div>
+
+  <div class="case-grid">
+    <div class="case"><h4>Problem</h4><p>A global bank needed to convert more FX payments straight through, without manual handling, using decisions advisors could trust and audit.</p></div>
+    <div class="case"><h4>What I owned</h4><p>Medallion pipelines, the ML pipeline integration, the RAG agent workflows, and the DataOps layer: CI/CD, RBAC, lineage and audit telemetry.</p></div>
+    <div class="case"><h4>Outcome</h4><p>50M+ events/day processed, an 86% accurate propensity model, and SHAP-based explanations behind every recommendation.</p></div>
+  </div>
+</section>
+
+<!-- ════════════════ HOW I WORK ════════════════ -->
+<section id="how" class="reveal">
+  <div class="sec-head">How I work</div>
+  <h2 class="sec-title">Built for the 3am failure</h2>
+  <div class="how-grid">
+    <div class="how"><h4>Root cause first</h4><p>From Microsoft support: read the telemetry, reproduce the failure, then fix the cause, not the symptom.</p></div>
+    <div class="how"><h4>Runbooks over heroics</h4><p>Every recurring incident becomes a runbook or an automated check, so the next person doesn't start from zero.</p></div>
+    <div class="how"><h4>Observable by default</h4><p>Lineage, row-count checks and audit logs are part of the pipeline design, not added after the first outage.</p></div>
+    <div class="how"><h4>Explainable AI</h4><p>In regulated domains, a model output needs a reason. I ship SHAP-based explanations with predictions.</p></div>
+  </div>
+</section>
+
+<!-- ════════════════ EXPERIENCE ════════════════ -->
+<section id="experience" class="reveal">
+  <div class="sec-head">Experience</div>
+  <h2 class="sec-title">Where I've worked</h2>
+  <p class="sec-sub">Nearly 4 years building data platforms and AI systems across fintech, enterprise SaaS, and e-commerce — from ITC Infotech to Microsoft to Tredence.</p>
+
+  <div class="exp-list">
+
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-co">Tredence</div>
+        <div class="exp-date">Jul 2026 – Present<br>Bangalore</div>
+      </div>
+      <div>
+        <div class="exp-role">Data &amp; AI Engineer</div>
+        <div class="exp-org">AI &amp; Platform Engineering</div>
+        <div class="exp-bullets">
+          <div class="exp-bullet">Architected <strong>AutoFX</strong> — AI-powered payment data platform for a global bank: Medallion pipelines (staging → canonical → curated) processing <strong>50M+ daily FX events</strong> via Azure Fabric OneLake and ADLS Gen2.</div>
+          <div class="exp-bullet">Designed a <strong>six-checkpoint ML pipeline</strong> integrating Azure AI Foundry LLMs, feature store, and propensity model (<strong>86% accuracy</strong>) — enabling straight-through FX conversion with measurable STP uplift.</div>
+          <div class="exp-bullet">Built <strong>RAG-grounded agentic workflows</strong> via MCP endpoints and FastAPI; returned <strong>SHAP-grounded, Responsible AI-aligned</strong> KPI insights with fairness and interpretability governance.</div>
+          <div class="exp-bullet">Engineered <strong>DataOps / CI/CD</strong> governance — RBAC, data lineage, audit telemetry, schema validation, and zero-regression deployments across all pipeline layers via Azure DevOps.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-co">Microsoft</div>
+        <div class="exp-date">Mar 2025 – Jun 2026<br>1 yr 4 months · Bangalore</div>
+      </div>
+      <div>
+        <div class="exp-role">Data Engineer</div>
+        <div class="exp-org">via Aptly Professional Technology</div>
+        <div class="exp-bullets">
+          <div class="exp-bullet">Served as <strong>trusted technical advisor</strong> for global enterprise clients — co-designed Azure-native data ingestion solutions (SAP ERP, REST APIs, SFTP, Fabric Lakehouses via ADF) aligned to Microsoft's cloud modernisation strategy.</div>
+          <div class="exp-bullet">Configured <strong>10+ production ADF connectors</strong>, resolved complex multi-tenant architecture failures via telemetry analysis, and drove <strong>platform fixes shipped globally</strong>.</div>
+          <div class="exp-bullet">Managed technical escalations, performed <strong>incident triage &amp; RCA</strong>, maintained runbooks and SOPs, and collaborated with architects and Sales to drive cloud consumption across strategic accounts.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-co">CoffeeBeans</div>
+        <div class="exp-date">Sep 2024 – Mar 2025<br>7 months · Bangalore</div>
+      </div>
+      <div>
+        <div class="exp-role">Data Engineer</div>
+        <div class="exp-org">CoffeeBeans Consulting</div>
+        <div class="exp-bullets">
+          <div class="exp-bullet">Built <strong>Python + Snowflake ETL pipelines</strong> with data validation, source-to-target reconciliation, and completeness checks — reduced query runtime <strong>35%</strong> on 5M+ daily eCommerce events.</div>
+          <div class="exp-bullet">Built <strong>MuleSoft API integrations</strong> connecting Salesforce with enterprise data platforms; implemented Salesforce Bulk API batch interfaces and REST API data flows with full error handling and retry logic.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-co">ITC Infotech</div>
+        <div class="exp-date">Jan 2022 – Jun 2023<br>1.5 years · Bangalore</div>
+      </div>
+      <div>
+        <div class="exp-role">Data Engineer</div>
+        <div class="exp-org">ITC Infotech</div>
+        <div class="exp-bullets">
+          <div class="exp-bullet">Led <strong>cloud modernisation migration</strong> (SQL Server / PostgreSQL → Snowflake / Azure Data Lake) — data profiling, schema conflict resolution, SCD Type 2 implementation, and star-schema dimensional modelling.</div>
+          <div class="exp-bullet">Built <strong>Airflow-orchestrated ADF pipelines</strong> with CI/CD via Azure DevOps — SoX-aware audit logging, data lineage, and zero-regression deployments across dev, UAT, and production.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════ CURRENTLY ════════════════ -->
+<section id="now" class="reveal">
+  <div class="sec-head">Currently</div>
+  <h2 class="sec-title">What I'm working on</h2>
+  <div class="log">
+    <div class="log-row">
+      <div class="log-k">Now</div>
+      <div class="log-v">Engineering <strong>AutoFX</strong> at Tredence — <span class="ac">50M+ FX events/day</span>, ML pipeline, RAG agents, Responsible AI</div>
+    </div>
+    <div class="log-row">
+      <div class="log-k">Active</div>
+      <div class="log-v">Preparing for <strong>DP-700</strong> Microsoft Fabric Data Engineer Associate</div>
+    </div>
+    <div class="log-row">
+      <div class="log-k">Building</div>
+      <div class="log-v">PipelineGuardian: <strong>LangChain + Airflow RCA agent</strong> that generates incident reports in &lt;60s</div>
+    </div>
+    <div class="log-row">
+      <div class="log-k">Exploring</div>
+      <div class="log-v"><strong>LangGraph</strong> multi-agent orchestration for financial data analyst workflows</div>
+    </div>
+    <div class="log-row">
+      <div class="log-k">Reading</div>
+      <div class="log-v"><em>Designing Data-Intensive Applications</em> &nbsp;·&nbsp; Anthropic's Responsible AI framework</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CERTS ════════════════ -->
+<section id="certs" class="reveal">
+  <div class="sec-head">Certifications &amp; Education</div>
+  <h2 class="sec-title">Credentials</h2>
+
+  <div class="edu-box" style="margin-bottom:32px;">
+    <div>
+      <div class="edu-deg">B.E. Computer Science &amp; Engineering</div>
+      <div class="edu-inst">Alva's Institute of Engineering &amp; Technology, Mangalore</div>
+    </div>
+    <div class="edu-meta">
+      <div class="edu-cgpa">7.1 / 10</div>
+      <div class="edu-yr">2021</div>
+    </div>
+  </div>
+
+  <div class="cert-grid">
+    <div class="cert-card">
+      <div class="cert-status pursuing">In preparation</div>
+      <div class="cert-code">DP-700</div>
+      <div class="cert-name">Microsoft Certified: Fabric Data Engineer Associate</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-status targeting">Targeting</div>
+      <div class="cert-code">AI-102</div>
+      <div class="cert-name">Microsoft Certified: Azure AI Engineer Associate</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-status exploring">Exploring</div>
+      <div class="cert-code">AZ-305</div>
+      <div class="cert-name">Microsoft Certified: Azure Solutions Architect Expert</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CONTACT ════════════════ -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-tag">Open to opportunities</div>
+    <h2 class="contact-heading">Let's build something<br><span>serious.</span></h2>
+    <p class="contact-sub">
+      I'm open to Data &amp; AI Engineering roles — Azure, Snowflake, LLM agents, Responsible AI.
+      If you're building something ambitious, let's talk.
+    </p>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:sandhyakapse17@gmail.com">↗ sandhyakapse17@gmail.com</a>
+      <a class="btn btn-outline" href="https://linkedin.com/in/sandhyakapse" target="_blank">LinkedIn</a>
+      <a class="btn btn-outline" href="https://github.com/sandhya71" target="_blank">GitHub</a>
+    </div>
+    <div style="font-size:11px; color:var(--muted); margin-top:8px;">+91 6360162412 &nbsp;·&nbsp; Bangalore, India</div>
+  </div>
+</section>
+
+</div><!-- /page -->
+</main>
+
+<footer>
+  <div class="footer-l">Sandhya Kapse &nbsp;·&nbsp; Bangalore, India &nbsp;·&nbsp; sandhyakapse17@gmail.com</div>
+  <div class="footer-r">"Build systems that don't need you awake at 3am."</div>
+</footer>
+
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('navlinks');
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o);});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded',false);}});
+
+  var rv=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08});
+    rv.forEach(function(el){io.observe(el);});
+  } else {rv.forEach(function(el){el.classList.add('in');});}
+
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var counters=document.querySelectorAll('[data-count]');
+  if(!reduce&&'IntersectionObserver' in window){
+    var co=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;co.unobserve(e.target);
+      var el=e.target,to=+el.dataset.count,suf=el.dataset.suffix||'',t0=null;
+      function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/900,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(step);}
+      requestAnimationFrame(step);
+    });},{threshold:.6});
+    counters.forEach(function(c){co.observe(c);});
+  }
+
+  var links=document.querySelectorAll('.nav-links a');
+  var secs=[].map.call(links,function(a){return document.querySelector(a.getAttribute('href'));});
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id);});}
+    });},{rootMargin:'-40% 0px -55% 0px'});
+    secs.forEach(function(x){if(x)so.observe(x);});
+  }
+})();
+</script>
+</body>
+</html>
